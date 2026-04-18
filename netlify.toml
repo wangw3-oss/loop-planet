@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+  command = "echo 'Build completed successfully'"
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "text/html; charset=utf-8"
+    Content-Security-Policy = "default-src 'self' https://cdn.jsdelivr.net; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net; img-src 'self' data: https://cdn.jsdelivr.net; media-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://cdn.jsdelivr.net"
